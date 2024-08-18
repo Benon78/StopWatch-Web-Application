@@ -91,7 +91,7 @@ lapBtn.addEventListener('click', function addLap() {
     ulEl.innerHTML += `<li>
                         <span class="lap-number">${lapCount}</span>
                         <span class="laps">
-                               ${hours}:${minutes}:${seconds}.${milliseconds} 
+                               ${h}:${m}:${s}.${milliseconds} 
                         </span> 
                         </li>`;
 });
