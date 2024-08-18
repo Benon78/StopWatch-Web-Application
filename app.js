@@ -86,6 +86,9 @@ resetBtn.addEventListener('click', function resetStopwatch() {
 
 // lap list
 lapBtn.addEventListener('click', function addLap() {
+    let h = hours< 10 ? '0' +hours : hours;
+    let m = minutes < 10 ? '0' + minutes : minutes;
+    let s = seconds < 10 ? '0' + seconds : seconds;
     let lapNumber = ulEl.childElementCount + 1;
     let lapCount = lapNumber <10 ? "0"+ lapNumber : lapNumber;
     ulEl.innerHTML += `<li>
