@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier Prime", system-ui;
+}
+body{
+    background-color: black;
+}
+
+.stopwatch-container{
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 150px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #807e7e;
+    border-radius: 5px;
+}
+.display-container{
+    background: transparent;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,.9);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.display-container h1 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: 400;
+
+}
+
+.lap-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-direction: column;
+    width: 100%;    
+}
+
+.lap-header, #lap-times-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    color: #fff;
+    gap: 20px;
+}
+
+.lap-header{
+    border-bottom: 1px solid #fff;
+}
+.lap-header h2{
+    font-weight: 300;
+    font-size: 28px;
+
+}
+
+.lap-header hr{
+    width: 100%;
+    border: 1px solid #fff;
+}
+
+#lap-times-container{
+   
+    align-items: flex-start;
+}
+
+/* #lap-times-container span{
+    display: inline-block;
+} */
+#lap-times-container ul{
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#lap-times-container ul li{
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.btn{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #201dac;
+}
+
+.stop-btn{
+    background: red;
+    display: none;
+}
+
+.resume-btn{
+    background: #201dac;
+    display: none;
+}
+
+.reset-btn{
+    background: #ff0000;
+    display: none;
+}
+
+.lap-btn:disabled{
+    background-color: #333;
+    cursor: not-allowed;
+    color: darkgray;
+}
+
+.controls-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet">
+    <title>StopWatch Web Application | Prodigy InfoTech </title>
+</head>
+<body>
+    <!-- stopwatch app -->
+    <div class="stopwatch-container">
+        <div class="display-container">
+            <h1 id="display">00:00:00.00</h1>
+        </div>
+
+        <div class="lap-container">
+            <div class="lap-header">
+                <h2>Lap</h2>
+                <h2>Laptimes</h2>
+            </div>
+            <div id="lap-times-container">
+                <!-- lap times will be dynamically added here -->
+                 <ul class="laps" id="ul-el">
+                   
+                 </ul>
+
+            </div>
+        </div>
+
+
+        <div class="controls-container" id="controls-container">
+            <button class="btn start-btn" id="start-btn">Start</button>
+            <button class="btn stop-btn " id="pause-btn">Stop</button>
+            <button class="btn reset-btn" id="reset-btn">Reset</button>
+            <button class="btn lap-btn" id="lap-btn" disabled>Lap</button>
+            <button class="btn resume-btn" id="resume-btn">Resume</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
