@@ -9,7 +9,7 @@ const controlDiv = document.getElementById('controls-container');
 let [hours, minutes, seconds, milliseconds] = [0, 0, 0, 0];
 let timer = null;
 
-
+// Inner control
 function updateTimer() {
   
     milliseconds ++;
@@ -31,6 +31,7 @@ function updateTimer() {
     displayEl.innerHTML = `${h}:${m}:${s}.${milliseconds}`;
 }
 
+// start the timer
 startBtn.addEventListener('click',function startStopwatch() {
     if (timer !== null) {
         clearInterval(timer);
@@ -42,6 +43,7 @@ startBtn.addEventListener('click',function startStopwatch() {
 }   
 );
 
+// pause the timer
 pauseBtn.addEventListener('click', function pauseStopwatch() {
     clearInterval(timer);
     timer = null;
@@ -54,6 +56,7 @@ pauseBtn.addEventListener('click', function pauseStopwatch() {
     controlDiv.style.flexDirection = 'row-reverse';
 }); 
 
+// resume animation
 resumeBtn.addEventListener('click', function ResumeWatch(){
     timer = setInterval(updateTimer, 10);
     startBtn.style.display = 'none';
@@ -65,6 +68,7 @@ resumeBtn.addEventListener('click', function ResumeWatch(){
     controlDiv.style.flexDirection = 'row';
 });
 
+// reset the timer and clear lap list
 resetBtn.addEventListener('click', function resetStopwatch() {
     clearInterval(timer);
     timer = null;
@@ -80,6 +84,7 @@ resetBtn.addEventListener('click', function resetStopwatch() {
     ulEl.innerHTML = '';
 });
 
+// lap list
 lapBtn.addEventListener('click', function addLap() {
     let lapNumber = ulEl.childElementCount + 1;
     let lapCount = lapNumber <10 ? "0"+ lapNumber : lapNumber;
